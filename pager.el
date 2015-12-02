@@ -141,5 +141,4 @@ The effect is that the cursor stays in the same position on the screen."
 ;; ----------------------------------------------------------------------
 
 (provide 'pager)
-
-
+;;; pager.el ends here
