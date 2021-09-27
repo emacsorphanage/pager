@@ -84,20 +84,20 @@ keep the `pager-temporary-goal-column'")
 ;;;###autoload
 (defun pager-page-down ()
   "Like scroll-up, but moves a fixed amount of lines (fixed relative the
-`window-height') so that pager-page-up moves back to the same line."
+`window-body-height') so that pager-page-up moves back to the same line."
   (interactive)
   (if (not (pos-visible-in-window-p (point-max)))
-      (pager-scroll-screen (- (1- (window-height))
+      (pager-scroll-screen (- (1- (window-body-height))
 			      next-screen-context-lines))))
 
 ;;;###autoload
 (defun pager-page-up ()
   "Like scroll-down, but moves a fixed amount of lines (fixed relative the
-`window-height') so that pager-page-down moves back to the same line."
+`window-body-height') so that pager-page-down moves back to the same line."
   (interactive)
   (if (not (pos-visible-in-window-p (point-min)))
       (pager-scroll-screen (- next-screen-context-lines 
-			      (1- (window-height))))))
+			      (1- (window-body-height))))))
 
 ;; ------------------------------
 
